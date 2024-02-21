@@ -56,7 +56,7 @@ app.get("/", async (req, res) => {
 
     const treandingResponse = await newsapi.v2.topHeadlines({
       country: "in",
-      category: "treanding",
+      category: "Entertainment",
     });
     // Extract necessary data from the API responses
     const justiceArticles = justiceResponse.articles.map((article) => ({
@@ -79,6 +79,7 @@ app.get("/", async (req, res) => {
         8
       ),
       url: article.url,
+      title: article.title,
     }));
 
     const sportsArticles = sportsResponse.articles.map((article) => ({
@@ -121,9 +122,9 @@ app.get("/", async (req, res) => {
       url: article.url,
     }));
 
-    const treadingArticles = treandingResponse.articles.map((article) => ({
-      imageUrl: article.urlToImage || "https://via.placeholder.com/800x500",
-      category: article.category || "Technology",
+    const treandingArticles = treandingResponse.articles.map((article) => ({
+      imageUrl: article.urlToImage || "https://via.placeholder.com/110x110",
+      category: article.category || "Entertainment",
       date: new Date(article.publishedAt).toDateString(),
       description: truncateDescription(
         article.description || "No description available",
@@ -141,7 +142,7 @@ app.get("/", async (req, res) => {
       breakingNews,
       politicsArticles,
       technologyArticles,
-      treadingArticles,
+      treandingArticles,
     });
   } catch (error) {
     console.error("Error fetching news:", error);
