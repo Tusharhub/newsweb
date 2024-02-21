@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const NewsAPI = require("newsapi");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const newsapi = new NewsAPI("b8acf9890d294e40ad5eec0d0c0e925f");
 
 // Set EJS as the view engine
