@@ -10,6 +10,7 @@
     "nodemon": "^3.0.3"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "netlify deploy --prod"
   }
 }
