@@ -11,6 +11,6 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "build": "npm start"
+    "build": "npm run build"
   }
 }
