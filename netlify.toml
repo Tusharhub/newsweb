@@ -1,4 +1,4 @@
 [build]
-  command = " nodemon server.js "
+  command = " npm run build --force "
   functions = "functions" # If you have serverless functions
   publish = "public" # Specify your build output directory if applicable
