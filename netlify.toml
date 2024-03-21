@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm run build"
   functions = "/"
   publish = "public"   # Adjust this line to point to your public folder containing index.ejs
 
