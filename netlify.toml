@@ -1,4 +1,9 @@
 [build]
-  command = "npm run build"
-  functions = "functions" # If you have serverless functions
-  publish = "public" # Specify your build output directory if applicable
+  command = "npm install && npm run build"
+  functions = "/"
+  publish = "public"   # Adjust this line to point to your public folder containing index.ejs
+
+[[redirects]]
+  from = "/*"
+  to = "/index.ejs"
+  status = 200
